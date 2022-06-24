@@ -21,7 +21,7 @@ export default function Home() {
         <div className={styles.box}>
           <BWImage src="/cards.jpg" alt="box" width={200} height={200} />
           <BWImage src="/cards.jpg" alt="box" width={200} height={200} />
-          <BWImage src="/cards.jpg" alt="box" width={200} height={200} />
+          <BWImage src="/cards.jpg" alt="box" width={200} height={200} effectType="backdropRollUp" />
         </div>
 
 
