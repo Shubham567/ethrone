@@ -3,6 +3,7 @@ import Image from 'next/image'
 import BWImage from "../src/components/BWImage";
 import Footer from "../src/components/Footer";
 import TopNav from "../src/components/TopNav";
+import Product from "../src/components/Product";
 
 export default function Home() {
   return (
@@ -24,7 +25,13 @@ export default function Home() {
           <BWImage src="https://images.unsplash.com/profile-fb-1514888261-0e72294039e0.jpg?ixlib=rb-1.2.1&crop=faces&fit=crop&w=32&h=32" alt="box" width={200} height={200} />
           <BWImage src="/cards.jpg" alt="box" width={200} height={200} effectType="backdropRollUp" />
           <BWImage src="/example2.bmp" alt="box" width={200} height={200} />
-          <BWImage src="/example2.bmp" alt="box" width={200} height={200} effectType="backdropRollUp"  />
+          <Product src="/example2.bmp"
+                  alt="box"
+                  effectType="backdropRollUp"
+                  name="Example 2"
+                  brand="Brand Name"
+                  price="₹ 100"
+          />
         </div>
 
 
