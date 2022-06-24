@@ -21,6 +21,6 @@ BWImage.prototype = {
   className: PropTypes.string,
   imageClassName: PropTypes.string,
   alt: PropTypes.string.required,
-  effectType: PropTypes.oneOf("backDropRollCenter","backDropRollUp")
+  effectType: PropTypes.oneOf(["backDropRollCenter","backDropRollUp"])
 }
 export default BWImage;
