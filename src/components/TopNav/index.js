@@ -42,9 +42,9 @@ const TopNav = () => {
                  placeholder="Search items"
                  name="query"
                  onBlur={handleLoseFocus}
-                 className="input input-ghost h-10 input-sm md:input-lg max-w-xs rounded-none"/>
+                 className="input input-ghost h-10 input-sm md:input-md max-w-xs rounded-none"/>
           <button type="submit"
-                  className="absolute right-0 top-0.5 p-1"
+                  className="absolute right-0 md:top-0.5 p-2"
                   aria-label="Search">
             <BiSearchAlt className="text-3xl text-black" />
           </button>
