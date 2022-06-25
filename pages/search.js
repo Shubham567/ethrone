@@ -44,7 +44,7 @@ export default function Home() {
 
       {/*  a square box*/}
         <div className={"flex gap-4"}>
-         <ProductList name={name} page={pageNumber}  title={`Showing results for "${name}"`}/>
+         <ProductList name={name} page={pageNumber} itemsToLoad={24} title={`Showing results for "${name}"`}/>
         </div>
         <div className={"flex justify-center mt-6"}>
           <Paginated pageNumber={pageNumber} onPrev={onPrev} onNext={onNext} />

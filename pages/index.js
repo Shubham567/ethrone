@@ -48,6 +48,10 @@ export default function Home() {
       <main className="py-4" id="main">
 
         <div className={"mb-2"}>
+          <ProductList name={"destination"} showMore page={1} itemsToLoad={6} title="Travel Destinations" />
+        </div>
+
+        <div className={"mb-2"}>
           <ProductList name={"watch"} showMore page={1} itemsToLoad={6} title="Watches for your style" />
         </div>
 
@@ -61,7 +65,7 @@ export default function Home() {
 
       {/*  a square box*/}
         <div className={"flex gap-4"}>
-         <ProductList name={name} page={pageNumber} title="More items to explore" />
+         <ProductList name={name} itemsToLoad={24} page={pageNumber} title="More items to explore" />
         </div>
         <div className={"flex justify-center pt-3"}>
           <Paginated pageNumber={pageNumber} onPrev={onPrev} onNext={onNext} />

@@ -9,9 +9,12 @@ const Leader = () => {
                  className="max-w-sm rounded-lg shadow-2xl" height={400} width={260}/>
         <div className="max-w-xl">
           <h1 className="text-5xl font-bold">A bold step towards social well-being!</h1>
-          <p className="py-6">
+          <p className="pt-6">
             Good behaviour is often involving and therefore is not physically rewarding to individual,
             We change that via the use of technology. We are using the power of the internet to help people also to change their behaviour.
+          </p>
+          <p className="pb-6 pt-4">
+            Tip: <span className="font-semibold">Hover images for color. Search functional.</span>
           </p>
           <a href="#main"><button className="btn">View Rewards</button> </a>
         </div>
