@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import BWImage from "../BWImage";
 import {useDispatch, useSelector} from "react-redux";
 import {addItemToCart} from "../../store/reducer/cartReducer";

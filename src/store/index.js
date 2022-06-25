@@ -1,8 +1,4 @@
-import {
-  Action,
-  configureStore,
-  ThunkAction,
-} from '@reduxjs/toolkit';
+import {configureStore,} from '@reduxjs/toolkit';
 import cartReducer from "./reducer/cartReducer";
 
 const store = configureStore({

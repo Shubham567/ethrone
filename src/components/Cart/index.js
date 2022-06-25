@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { HiOutlineShoppingCart } from "react-icons/hi";
 
 const calculateTotal = (cartItems) => {
   return cartItems.reduce((acc, item) => acc + item.price, 0);
