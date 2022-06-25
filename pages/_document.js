@@ -6,7 +6,7 @@ import React from "react";
 class MyDocument extends Document {
   render() {
     return (
-      <Html lang="en-US">
+      <Html lang="en-US" className="scroll-smooth">
         <Head>
           {/* Do NOT add title tag in this file*/}
 
@@ -20,7 +20,7 @@ class MyDocument extends Document {
 
 
         </Head>
-        <body>
+        <body className="bg-base-200">
           <Main />
           <NextScript />
         </body>

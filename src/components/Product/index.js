@@ -22,13 +22,15 @@ const Product = ({id,name,brand,price,src,alt, size = 200,...props}) => {
       <BWImage src={src} alt={alt} width={size} height={size} {...props} />
       <div className="flex">
         <div className="w-9/12">
-          <h2 className="text-black text-xl dark:text-white font-semibold">{name}</h2>
-          <h3 className="text-black text-sm dark:text-white">{brand}</h3>
+          <h2 className="text-black text-xl dark:text-white font-semibold break-all">{name.trim().slice(0,14)}</h2>
+          <h3 className="text-black text-sm dark:text-white capitalize">{brand}</h3>
           <h4 className="text-black text-xs dark:text-white ">₹ {price}</h4>
         </div>
         <div className="w-3/12 mt-2 text-right">
-          <button className="btn btn-sm" onClick={handleAddItemToCart}>+</button>
-          <h4 className="text-sm text-gray-400 text-center">{itemCount}<span> {itemCount && "items"}</span></h4>
+          <div  className="tooltip z-10" data-tip="Add item to cart">
+            <button className="btn btn-sm" onClick={handleAddItemToCart}>+</button>
+          </div>
+          <h4 className="text-sm text-gray-400 text-center">{itemCount}<span> {itemCount && "item"}</span></h4>
         </div>
       </div>
     </div>

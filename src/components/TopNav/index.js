@@ -3,19 +3,53 @@ import Image from "next/image";
 import Cart from "../Cart";
 import BWImage from "../BWImage";
 import withCartDataInjector from "../../store/dataInjectors/withCartDataInjector";
+import {BiSearchAlt} from "react-icons/bi";
+import {useRouter} from "next/router";
+import Link from "next/link";
 
 const TopNav = () => {
+
+  const router = useRouter();
+
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+    const search = e.target.query.value;
+    if(!search) {
+      return;
+    }
+    e.target.query.value = "";
+    router.push({ pathname: "/search", query: { q: search , p: 1} });
+  }
+
+  const handleLoseFocus = (e) => {
+    e.target.value = "";
+  }
+
   return (
     <div className="navbar bg-black">
       <div className="flex-1">
-        <a className="normal-case text-xl">
-          <div className="color pl-2 flex text-3xl gap-2 items-center">
+        <Link className="normal-case text-xl" href="/" passHref>
+          <div className="color pl-2 flex text-3xl gap-2 items-center cursor-pointer">
             <Image src="/throne.jpg" alt="box" width={50} height={50} unoptimized={true} />
             <h1 className="text-3xl font-thin text-white uppercase">nETHer</h1>
           </div>
-        </a>
+        </Link>
       </div>
 
+      <div className="flex relative">
+        <form onSubmit={handleFormSubmit}>
+          <input type="text"
+                 placeholder="Search for items"
+                 name="query"
+                 onBlur={handleLoseFocus}
+                 className="input input-ghost h-10 input-lg w-full w-full max-w-xs rounded-none"/>
+          <button type="submit"
+                  className="absolute right-0 top-0.5 p-1"
+                  aria-label="Search">
+            <BiSearchAlt className="text-3xl text-black" />
+          </button>
+        </form>
+      </div>
         <CartWithData />
 
         <div className="dropdown dropdown-end">

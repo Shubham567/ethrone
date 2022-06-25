@@ -8,7 +8,7 @@ export default async function handler(req, res) {
     const {
       query,
       page = 1,
-      per_page = 10,
+      per_page = 12,
     } = req.query;
 
     console.assert(query, "query is required");
