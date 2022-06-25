@@ -26,12 +26,12 @@ const TopNav = () => {
   }
 
   return (
-    <div className="navbar bg-black">
+    <div className="navbar bg-black sticky top-0 z-50">
       <div className="flex-1">
         <Link className="normal-case text-xl" href="/" passHref>
-          <div className="color pl-2 flex text-3xl gap-2 items-center cursor-pointer">
+          <div className="color pl-0 md:pl-2 flex text-3xl gap-2 items-center cursor-pointer">
             <Image src="/throne.jpg" alt="box" width={50} height={50} unoptimized={true} />
-            <h1 className="text-3xl font-thin text-white uppercase">nETHer</h1>
+            <h1 className="text-3xl hidden sm:block font-thin text-white uppercase">nETHer</h1>
           </div>
         </Link>
       </div>
@@ -39,10 +39,10 @@ const TopNav = () => {
       <div className="flex relative">
         <form onSubmit={handleFormSubmit}>
           <input type="text"
-                 placeholder="Search for items"
+                 placeholder="Search items"
                  name="query"
                  onBlur={handleLoseFocus}
-                 className="input input-ghost h-10 input-lg w-full w-full max-w-xs rounded-none"/>
+                 className="input input-ghost h-10 input-sm md:input-lg max-w-xs rounded-none"/>
           <button type="submit"
                   className="absolute right-0 top-0.5 p-1"
                   aria-label="Search">
