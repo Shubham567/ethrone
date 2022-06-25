@@ -6,7 +6,7 @@ const Leader = () => {
     <div className="hero">
       <div className="hero-content flex-col lg:flex-row-reverse">
         <BWImage alt="A sample item" src="https://images.unsplash.com/photo-1513201099705-a9746e1e201f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNDA3ODV8MHwxfHNlYXJjaHwxfHxnaWZ0fGVufDB8fHx8MTY1NjE3MjI1Mw&ixlib=rb-1.2.1&q=80&w=1080"
-                 className="max-w-sm rounded-lg shadow-2xl" height={400} width={260}/>
+                 className="max-w-sm rounded-lg" height={390} width={260}/>
         <div className="max-w-xl">
           <h1 className="text-5xl font-bold">A bold step towards social well-being!</h1>
           <p className="pt-6">
