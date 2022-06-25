@@ -11,7 +11,7 @@ const TopNac = props => {
     <nav className={clsx("flex w-full sticky top-0 items-center justify-between bg-black pb-1")}>
       <div className="color pl-2 flex text-3xl gap-2 items-center">
         <Image src="/throne.jpg" alt="box" width={50} height={50} unoptimized={true} />
-        <h1 className="text-3xl font-thin text-white uppercase">EThrone</h1>
+        <h1 className="text-3xl font-thin text-white uppercase">nETHer</h1>
       </div>
 
       <div className="flex relative">

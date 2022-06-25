@@ -6,7 +6,7 @@ const Footer = () => {
     <footer className="footer p-10 bg-black text-neutral-content">
       <div>
         <Image src="/throne.jpg" alt="box" width={50} height={50} unoptimized={true} />
-        <p>eThrone<br/>Benefits of being good</p>
+        <p>nETHer<br/>Benefits of being good</p>
       </div>
       <div>
         <span className="footer-title">Social</span>
