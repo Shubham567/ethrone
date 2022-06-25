@@ -48,6 +48,10 @@ export default function Home() {
       <main className="py-4" id="main">
 
         <div className={"mb-2"}>
+          <ProductList name={"flowers"} showMore page={1} itemsToLoad={6} title="Have some Flowers" />
+        </div>
+
+        <div className={"mb-2"}>
           <ProductList name={"destination"} showMore page={1} itemsToLoad={6} title="Travel Destinations" />
         </div>
 
