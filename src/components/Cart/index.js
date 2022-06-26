@@ -32,9 +32,12 @@ const Cart = ({cartItems = [],cartItemCount,onViewCart,props}) => {
             <span className="font-bold text-black text-lg">{cartItems.length} Items</span>
             {
               cartItemList.map((item) => {
-                return <span key={item.id} className="text-gray-700">
-                    <BWImage alt={item.name} src={item.thumb} width={30} height={30}/>
-                  {item.name}  ₹ {item.price} {cartItemCount[item.id] > 1 && `x ${cartItemCount[item.id]}`}</span>
+                return <div key={item.id} className="text-gray-700 flex items-center gap-2">
+                  <BWImage alt={item.name} src={item.thumb} width={30} height={30} imageClassName="rounded-full"/>
+                  <span className="-mt-1">
+                  {item.name}  ₹ {item.price} {cartItemCount[item.id] > 1 && `x ${cartItemCount[item.id]}`}
+                  </span>
+                </div>
               })
             }
             <span className="text-gray-700 font-semibold">Subtotal: ₹ {total || 0}</span>
