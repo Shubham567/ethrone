@@ -12,7 +12,6 @@ const Cart = ({cartItems = [],cartItemCount,onViewCart,props}) => {
     return  cartItems.find((item) => item.id === itemId)
   });
 
-  console.log({cartItemList, cartItemCount});
 
   return (
     <div className="flex-none text-white">
