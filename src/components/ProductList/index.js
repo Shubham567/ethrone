@@ -27,6 +27,7 @@ const ProductList = React.memo(({name = DEFAULTS.searchItem,showMore,title,page,
               src: item.urls.small,
               alt: item.alt_description,
               size: 200,
+              thumb: item.urls.thumb,
             }
           }
         ))

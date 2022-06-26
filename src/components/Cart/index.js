@@ -1,12 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import BWImage from "../BWImage";
 
 const calculateTotal = (cartItems) => {
   return cartItems.reduce((acc, item) => acc + item.price, 0);
 }
 
-const Cart = ({cartItems = [],onViewCart,props}) => {
+const Cart = ({cartItems = [],cartItemCount,onViewCart,props}) => {
   const total = calculateTotal(cartItems);
+  let cartItemList = Object.keys(cartItemCount).map((itemId) => {
+    return  cartItems.find((item) => item.id === itemId)
+  });
+
+  console.log({cartItemList, cartItemCount});
+
   return (
     <div className="flex-none text-white">
       <div className="dropdown dropdown-end">
@@ -20,12 +27,19 @@ const Cart = ({cartItems = [],onViewCart,props}) => {
             <span className="badge badge-sm indicator-item">{cartItems.length}</span>
           </div>
         </label>
-        <div tabIndex="0" className="mt-3 card card-compact dropdown-content w-52 bg-base-100 shadow-lg">
+        <div tabIndex="0" className="mt-3 card card-compact dropdown-content w-64 bg-base-100 shadow-lg">
           <div className="card-body">
             <span className="font-bold text-black text-lg">{cartItems.length} Items</span>
-            <span className="text-gray-700">Subtotal: ₹ {total || 0}</span>
+            {
+              cartItemList.map((item) => {
+                return <span key={item.id} className="text-gray-700">
+                    <BWImage alt={item.name} src={item.thumb} width={30} height={30}/>
+                  {item.name}  ₹ {item.price} {cartItemCount[item.id] > 1 && `x ${cartItemCount[item.id]}`}</span>
+              })
+            }
+            <span className="text-gray-700 font-semibold">Subtotal: ₹ {total || 0}</span>
             <div className="card-actions">
-              <button className="btn btn-block" disabled onClick={onViewCart}>View cart</button>
+              <button className="btn btn-block" disabled onClick={onViewCart}>Checkout</button>
             </div>
           </div>
         </div>

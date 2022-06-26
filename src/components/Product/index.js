@@ -3,7 +3,7 @@ import BWImage from "../BWImage";
 import {useDispatch, useSelector} from "react-redux";
 import {addItemToCart} from "../../store/reducer/cartReducer";
 
-const Product = ({id,name,brand,price,src,alt, size = 200,...props}) => {
+const Product = ({id,name,brand,price,src,thumb,alt, size = 200,...props}) => {
 
   const dispatch = useDispatch();
   const itemCount = useSelector((state) => state.cart.cartItemCount[id]);
@@ -11,7 +11,7 @@ const Product = ({id,name,brand,price,src,alt, size = 200,...props}) => {
   const handleAddItemToCart = () => {
     dispatch(addItemToCart({
     item:{
-      id, name, brand, price
+      id, name, brand, price, thumb
     }
   }));
   }
