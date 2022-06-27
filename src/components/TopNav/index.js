@@ -37,11 +37,10 @@ const TopNav = () => {
       </div>
 
       <div className="flex relative">
-        <form onSubmit={handleFormSubmit}>
-          <input type="text"
+        <form onSubmit={handleFormSubmit} onBlur={handleLoseFocus}>
+          <input type="search"
                  placeholder="Search items"
                  name="query"
-                 onBlur={handleLoseFocus}
                  className="input input-ghost h-10 input-sm md:input-md max-w-xs rounded-none"/>
           <button type="submit"
                   className="absolute right-0 md:top-0.5 p-2"
